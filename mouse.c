@@ -48,7 +48,7 @@ int main(){
     while(!EQU(current,out)){
         current = FindGetPlace(head, current);
         if(EQU(current, noExit)){
-            printf("NO EXIT!!!");
+            printf("NO EXIT!!!\n");
             break;
         }
         printf("move to (%d, %d)\n", current.x, current.y);
