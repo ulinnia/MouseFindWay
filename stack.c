@@ -2,6 +2,11 @@
 #include<stdlib.h>
 #include "mouse.h"
 
+int isEmpty(pock_t *headPtr){
+    if (headPtr->next==NULL)return 1;
+    return 0;
+}
+
 void Push(pock_t *headPtr, axis_t element){
     pock_t *NewPtr = (pock_t *) malloc(sizeof(pock_t));
     NewPtr->coor = element;
@@ -17,9 +22,4 @@ axis_t GetTheTop(pock_t *headPtr){
     temp = current->coor;
     free(current);
     return temp;
-}
-
-int isEmpty(pock_t *headPtr){
-    if (headPtr->next==NULL)return 1;
-    return 0;
 }
