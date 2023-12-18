@@ -4,6 +4,7 @@
 typedef struct Pocket pock_t;
 
 #define EQU(p,q) (p.x==q.x && p.y==q.y)
+#define FOURDIREC(i,j) (((i^j)==i || (i^j)==j)&&(!(i==0 && j==0)))
 
 typedef struct axis{
 	int x;
