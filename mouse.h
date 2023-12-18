@@ -1,6 +1,8 @@
 #ifndef _MAGIC_
 #define _MAGIC_
 
+typedef struct Pocket pock_t;
+
 #define EQU(p,q) (p.x==q.x && p.y==q.y)
 
 typedef struct axis{
