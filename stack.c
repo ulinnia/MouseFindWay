@@ -1,3 +1,4 @@
+#include<assert.h>
 #include <stdio.h>
 #include<stdlib.h>
 #include "mouse.h"
@@ -9,6 +10,7 @@ int isEmpty(pock_t *headPtr){
 
 void Push(pock_t *headPtr, axis_t element){
     pock_t *NewPtr = (pock_t *) malloc(sizeof(pock_t));
+    assert(NewPtr);
     NewPtr->coor = element;
     NewPtr->next = headPtr->next;
     headPtr->next = NewPtr;

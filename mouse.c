@@ -1,3 +1,4 @@
+#include<assert.h>
 #include "mouse.h"
 #include <stdio.h>
 #include<stdlib.h>
@@ -36,6 +37,7 @@ axis_t FindGetPlace(pock_t *head, axis_t current){
 
 int main(){
     pock_t *head = (pock_t *)malloc(sizeof(pock_t));
+    assert(head);
     head->next = NULL;
     axis_t current;
     axis_t entry = {1, 0};
